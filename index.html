@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T Movies</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="icon" href="material-symbols-outlined" type="move" /> -->
+  </head>
+  <body>
+    <aside class="sidebar sidebar--menu">
+      <div class="container">
+        <div class="sidebar__menu-header">
+          <button class="sidebar__toggle" id="sidebarToggle">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+        <div class="sidebar__logo">
+          <img src="assets/images/logo.png" alt="Logo" />
+          <h2 class="sidebar__logo-text">T.Movie</h2>
+        </div>
+
+        <h4>
+          <span>Menu</span>
+        </h4>
+
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">
+              <span class="material-symbols-outlined sidebar__icon">
+                workspace_premium
+              </span>
+              Discover
+            </a>
+          </li>
+
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">
+              <span class="material-symbols-outlined sidebar__icon">
+                list
+              </span>
+              Watchlist
+            </a>
+          </li>
+
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">
+              <span class="material-symbols-outlined sidebar__icon">
+                article_person
+              </span>
+              Blog
+            </a>
+          </li>
+
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">
+              <span class="material-symbols-outlined sidebar__icon">
+                group
+              </span>
+              Artists
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar__divider"></div>
+
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">
+              <span class="material-symbols-outlined sidebar__icon">
+                call
+              </span>
+              Contact us
+            </a>
+          </li>
+
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">
+              <span class="material-symbols-outlined sidebar__icon">
+                help
+              </span>
+              Help Center
+            </a>
+          </li>
+
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">
+              <span class="material-symbols-outlined sidebar__icon">
+                settings
+              </span>
+              Settings
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar__subscribe">
+          <p class="sidebar__subscribe-text">
+            Click the button below to see the plans
+          </p>
+          <button class="sidebar__subscribe-btn">
+            <span class="material-symbols-outlined sidebar__icon"
+              >workspace_premium</span
+            >see plans
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="page-center">
+      <header class="header">
+        <div class="container">
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li class="header__item">
+                <a href="#">All</a>
+              </li>
+
+              <li class="header__item"><a href="#">Movie</a></li>
+
+              <li class="header__item"><a href="#">Series</a></li>
+
+              <li class="header__item header__dropdown">
+                <a href="#">
+                  Genres
+                  <span class="material-symbols-outlined header__arrow">
+                    expand_more
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__right">
+            <div class="header__search">
+              <span class="material-symbols-outlined header__search-icon">
+                search
+              </span>
+
+              <input
+                type="text"
+                placeholder="Search the series, movies ..."
+                class="header__search-input"
+              />
+
+              <span class="material-symbols-outlined header__filter-icon">
+                tune
+              </span>
+            </div>
+
+            <button class="header__notif-btn">
+              <span class="material-symbols-outlined"> notifications </span>
+              <span class="header__notif-dot"></span>
+            </button>
+
+            <div class="header__profile">
+              <img
+                id="profileImg"
+                src="https://i.pravatar.cc/150?img=1"
+                alt="User Profile"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-layout">
+          <div class="hero">
+            <div class="hero__background">
+              <img
+                id="hero__bg"
+                src="assets/images/hero.jpg"
+                alt="Game of Thrones"
+              />
+            </div>
+
+            <div class="hero__content">
+              <h1 class="hero__title" id="hero__title">Game of Thrones</h1>
+
+              <div class="hero__meta" id="hero__meta">
+                <span class="hero__imdb">
+                  <span class="hero__imdb-logo">IMDb</span>
+                  9.2
+                </span>
+                <span>Action</span>
+                <span>Adventure</span>
+                <span>Drama</span>
+              </div>
+
+              <p class="hero__desc" id="hero__desc">
+                It's the story of the intricate and bloody battles of several
+                noble families in the fictional land of Westeros. These
+                families, including the Starks, the Lannisters, and the
+                Targaryens, fight for control of the Iron Throne, the symbol of
+                power in the Seven Kingdoms.
+              </p>
+
+              <div class="hero__buttons">
+                <button class="btn btn--primary">WATCH</button>
+                <button class="btn btn--outline">Trailer</button>
+              </div>
+            </div>
+
+            <div class="hero__arrows">
+              <button class="hero__arrow">
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+
+              <button class="hero__arrow">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
+
+          <aside class="sidebar-news">
+            <div class="hotnews-sidebar__card">
+              <div class="hotnews-sidebar__image">
+                <img src="assets/images/hotnews.jpg" alt="Hot News" />
+              </div>
+
+              <div class="hotnews-sidebar__content">
+                <div class="hotnews-sidebar__title">
+                  <span class="material-symbols-outlined hotnews-sidebar__icon">
+                    local_fire_department
+                  </span>
+                  <h3>Hot News</h3>
+                </div>
+
+                <p class="hotnews-sidebar__text">
+                  "Slow Horses," the popular spy drama, has been renewed for a
+                  fifth season, much to the delight of its dedicated fanbase.
+                  The highly anticipated fourth season is set to premiere on
+                  September 4, 2024, promising more thrilling storylines and
+                  complex characters that viewers have come to love. Notable
+                  cast members, including the acclaimed Gary Oldman and Cillian
+                  Murphy, will continue to bring depth and intrigue to the
+                  series.
+                </p>
+              </div>
+
+              <div class="hotnews-sidebar__footer">
+                <span class="hotnews-sidebar__date">25 July</span>
+                <span class="hotnews-sidebar__count">1/6</span>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section section--recommended">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Recommended For You</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+
+            <div class="movies-grid" id="recommended-movies">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Recommended For You.jpg"
+                    alt="Hotel Transylvania"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    7.0/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--trending">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Trending Movies</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+
+            <div class="movies-grid" id="trending-movies">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending Movies.jpg"
+                    alt="Greedy People"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.1/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Greedy People</h3>
+                  <p class="movie-card__genres">Crime, Comedy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--triple-banner">
+          <div class="container">
+            <div class="banner banner--card-A">
+              <img
+                src="assets/images/kevin_spacey.jpg"
+                alt="Shogun"
+                class="banner__img"
+              />
+
+              <div class="banner__content">
+                <h2 class="banner__title">NAME MOVE</h2>
+
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+              </div>
+            </div>
+
+            <div class="banner banner--card-B">
+              <img
+                src="assets/images/wolverine.jpg"
+                alt="The Sympathizer"
+                class="banner__img"
+              />
+
+              <div class="banner__content">
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+
+                <h2 class="banner__title">NAME MOVE</h2>
+
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+              </div>
+            </div>
+
+            <div class="banner banner--card-C">
+              <img
+                src="assets/images/the_naked_gun.jpg"
+                alt="Small_Light"
+                class="banner__img"
+              />
+
+              <div class="banner__content banner__content--right">
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+
+                <h2 class="banner__title">NAME MOVE</h2>
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--trending-series">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Trending Series</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+
+            <div class="movies-grid" id="trending-series">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending Series.jpg"
+                    alt="The Union"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    5.5/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">The Union</h3>
+                  <p class="movie-card__genres">Action, Comedy, Thriller</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Trending Series.jpg" alt="Oddity" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.7/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Oddity</h3>
+                  <p class="movie-card__genres">Horror, Thriller</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Trending Series.jpg" alt="Oddity" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.7/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Oddity</h3>
+                  <p class="movie-card__genres">Horror, Thriller</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Trending Series.jpg" alt="Oddity" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.7/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Oddity</h3>
+                  <p class="movie-card__genres">Horror, Thriller</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Trending Series.jpg" alt="Oddity" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.7/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Oddity</h3>
+                  <p class="movie-card__genres">Horror, Thriller</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Trending Series.jpg" alt="Oddity" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.7/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Oddity</h3>
+                  <p class="movie-card__genres">Horror, Thriller</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--genres">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Genres</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+
+            <div class="genres__tabs">
+              <button class="genres__tab">Comedy</button>
+              <button class="genres__tab">Drama</button>
+              <button class="genres__tab">Historical</button>
+              <button class="genres__tab">Action</button>
+              <button class="genres__tab">Lover</button>
+              <button class="genres__tab">Animation</button>
+              <button class="genres__tab">Imaginary</button>
+              <button class="genres__tab">Criminal</button>
+            </div>
+
+            <div class="movies-grid" id="genres-movies">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Genres.jpg" alt="Kinds of Kindness" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.6/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Kinds of Kindness</h3>
+                  <p class="movie-card__genres">Comedy, Drama</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Genres.jpg" alt="Kinds of Kindness" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.6/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Kinds of Kindness</h3>
+                  <p class="movie-card__genres">Comedy, Drama</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Genres.jpg" alt="Kinds of Kindness" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.6/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Kinds of Kindness</h3>
+                  <p class="movie-card__genres">Comedy, Drama</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Genres.jpg" alt="Kinds of Kindness" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.6/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Kinds of Kindness</h3>
+                  <p class="movie-card__genres">Comedy, Drama</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Genres.jpg" alt="Kinds of Kindness" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.6/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Kinds of Kindness</h3>
+                  <p class="movie-card__genres">Comedy, Drama</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/Genres.jpg" alt="Kinds of Kindness" />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <div class="movie-card__rating">
+                    <span class="material-symbols-outlined">star</span>
+                    6.6/10
+                  </div>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Kinds of Kindness</h3>
+                  <p class="movie-card__genres">Comedy, Drama</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--triple-banner">
+          <div class="container">
+            <div class="banner banner--card-A">
+              <img
+                src="assets/images/captain_america.jpg"
+                alt="Shogun"
+                class="banner__img"
+              />
+
+              <div class="banner__content">
+                <h2 class="banner__title">NAME MOVE</h2>
+
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+              </div>
+            </div>
+
+            <div class="banner banner--card-B">
+              <img
+                src="assets/images/batman_night_snow.jpg"
+                alt="The Sympathizer"
+                class="banner__img"
+              />
+
+              <div class="banner__content">
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+
+                <h2 class="banner__title">NAME MOVE</h2>
+
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+              </div>
+            </div>
+
+            <div class="banner banner--card-C">
+              <img
+                src="assets/images/superman.jpg"
+                alt="Small_Light"
+                class="banner__img"
+              />
+
+              <div class="banner__content banner__content--right">
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+
+                <h2 class="banner__title">NAME MOVE</h2>
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--imdb-movies">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">IMDB Top Movies</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_right_alt</span>
+              </a>
+            </div>
+
+            <div class="movies-grid">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Movies.jpg"
+                    alt="The Pianist"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Movies.jpg"
+                    alt="The Pianist"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Movies.jpg"
+                    alt="The Pianist"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Movies.jpg"
+                    alt="The Pianist"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Movies.jpg"
+                    alt="The Pianist"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Movies.jpg"
+                    alt="The Pianist"
+                  />
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--imdb-series">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">IMDB Top Series</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_right_alt</span>
+              </a>
+            </div>
+
+            <div class="movies-grid">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Series.png"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Series.png"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Series.png"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Series.png"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Series.png"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/IMDB Top Series.png"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--triple-banner">
+          <div class="container">
+            <div class="banner banner--card-A">
+              <img
+                src="assets/images/the_joker.jpg"
+                alt="Shogun"
+                class="banner__img"
+              />
+
+              <div class="banner__content">
+                <h2 class="banner__title">NAME MOVE</h2>
+
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+              </div>
+            </div>
+
+            <div class="banner banner--card-B">
+              <img
+                src="assets/images/warcraft_.jpg"
+                alt="The Sympathizer"
+                class="banner__img"
+              />
+
+              <div class="banner__content">
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+
+                <h2 class="banner__title">NAME MOVE</h2>
+
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+              </div>
+            </div>
+
+            <div class="banner banner--card-C">
+              <img
+                src="assets/images/tony_stark.jpg"
+                alt="Small_Light"
+                class="banner__img"
+              />
+
+              <div class="banner__content banner__content--right">
+                <button class="btn btn--top">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                  Watch now
+                </button>
+
+                <h2 class="banner__title">NAME MOVE</h2>
+                <span class="banner__subtitle">Historical, Drama, Action</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--trending-tv-shows">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Trending TV Shows</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_right_alt</span>
+              </a>
+            </div>
+
+            <div class="movies-grid">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending TV Shows.jpg"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending TV Shows.jpg"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending TV Shows.jpg"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending TV Shows.jpg"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending TV Shows.jpg"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img
+                    src="assets/images/Trending TV Shows.jpg"
+                    alt="The Pianist"
+                  />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--my-watchlist">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">My Watchlist</h2>
+              <a href="#" class="section__link">
+                View All
+                <span class="material-symbols-outlined">arrow_right_alt</span>
+              </a>
+            </div>
+
+            <div class="movies-grid">
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/My Watchlist.jpg" alt="The Pianist" />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/My Watchlist.jpg" alt="The Pianist" />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/My Watchlist.jpg" alt="The Pianist" />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/My Watchlist.jpg" alt="The Pianist" />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/My Watchlist.jpg" alt="The Pianist" />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+
+              <div class="movie-card">
+                <div class="movie-card__image">
+                  <img src="assets/images/My Watchlist.jpg" alt="The Pianist" />
+                  <span class="movie-card__rating">
+                    <span class="material-symbols-outlined">grade</span>
+                    8.5/10
+                  </span>
+
+                  <button class="movie-card__favorite">
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+
+                <div class="movie-card__info">
+                  <h3 class="movie-card__title">Hotel Transylvania</h3>
+                  <p class="movie-card__genres">Animation, Comedy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
