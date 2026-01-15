@@ -27,7 +27,6 @@ async function initHomePage() {
 
   if (document.getElementById("hero__title")) {
     heroMovies = await getHeroMovie();
-    heroIndex = 0;
     renderHero(heroMovies[heroIndex]);
     initHeroSlider();
   }
@@ -40,6 +39,26 @@ async function initHomePage() {
   if (document.getElementById("trending-movies")) {
     const trending = await getTrendingMovies();
     renderMovies("trending-movies", trending.results);
+  }
+
+  if (document.getElementById("trending-series")) {
+    const series = await getTrendingSeries();
+    renderMovies("trending-series", series);
+  }
+
+  if (document.getElementById("genres__tabs")) {
+    const genresArray = Object.entries(GENRES_MAP).map(([id, name]) => ({
+      id: Number(id),
+      name,
+    }));
+
+    renderGenresTabs(genresArray);
+
+    const firstGenreId = genresArray[0].id;
+    const movies = await getMoviesByGenre(firstGenreId);
+    renderMovies("genres-movies", movies);
+
+    initGenresTabs();
   }
 }
 initHomePage();
@@ -56,5 +75,22 @@ function initHeroSlider() {
   prevBtn.addEventListener("click", () => {
     heroIndex = (heroIndex - 1 + heroMovies.length) % heroMovies.length;
     renderHero(heroMovies[heroIndex], true);
+  });
+}
+
+//Genres tabs functionality
+
+function initGenresTabs() {
+  const tabs = document.querySelectorAll(".genres__tab");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", async () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      const genreId = tab.dataset.id;
+      const movies = await getMoviesByGenre(genreId);
+      renderMovies("genres-movies", movies);
+    });
   });
 }

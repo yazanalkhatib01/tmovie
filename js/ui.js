@@ -39,14 +39,17 @@ slider.addEventListener("mousemove", (e) => {
 
 //Api-ui
 // cards
-function createMovieCard(movie) {
+function createMovieCard(item) {
+  const title = item.title || item.name;
+  const image = item.poster_path || item.backdrop_path;
+  const rating = item.vote_average?.toFixed(1) || "N/A";
+
+  if (!image) return "";
+
   return `
     <div class="movie-card">
       <div class="movie-card__image">
-        <img 
-          src="${IMAGE_BASE_URL}${movie.poster_path}" 
-          alt="${movie.title}"
-        />
+        <img src="${IMAGE_BASE_URL + image}" alt="${title}" />
 
         <button class="movie-card__favorite">
           <span class="material-symbols-outlined">favorite</span>
@@ -54,12 +57,12 @@ function createMovieCard(movie) {
 
         <div class="movie-card__rating">
           <span class="material-symbols-outlined">star</span>
-          ${movie.vote_average.toFixed(1)}
+          ${rating}
         </div>
       </div>
 
       <div class="movie-card__info">
-        <h3 class="movie-card__title">${movie.title}</h3>
+        <h3 class="movie-card__title">${title}</h3>
       </div>
     </div>
   `;
@@ -104,4 +107,22 @@ function renderHero(movie, animate = false) {
   if (animate) {
     setTimeout(() => hero.classList.remove("hero--fade"), 300);
   }
+}
+
+//Genres tabs
+function renderGenresTabs(genres) {
+  const container = document.getElementById("genres__tabs");
+
+  container.innerHTML = genres
+    .slice(0, 8)
+    .map(
+      (g, i) => `
+      <button 
+        class="genres__tab ${i === 0 ? "active" : ""}" 
+        data-id="${g.id}">
+        ${g.name}
+      </button>
+    `
+    )
+    .join("");
 }

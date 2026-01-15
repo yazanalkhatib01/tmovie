@@ -7,20 +7,17 @@ console.log("API JS LOADED");
  */
 
 async function fetchFromAPI(endpoint) {
-  const url = `${BASE_URL}${endpoint}?api_key=${API_KEY}`;
+  const separator = endpoint.includes("?") ? "&" : "?";
 
-  try {
-    const response = await fetch(url);
+  const res = await fetch(
+    `${BASE_URL}${endpoint}${separator}api_key=${API_KEY}`
+  );
 
-    if (!response.ok) {
-      throw new Error(`API Error: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Fetch Error:", error);
+  if (!res.ok) {
+    throw new Error(`API Error: ${res.status}`);
   }
+
+  return res.json();
 }
 
 /**
@@ -50,4 +47,18 @@ async function loadGenres() {
   data.genres.forEach((g) => {
     GENRES_MAP[g.id] = g.name;
   });
+}
+
+//Trending Series
+async function getTrendingSeries() {
+  const data = await fetchFromAPI("/trending/tv/day");
+  return data.results;
+}
+
+// Genres
+async function getMoviesByGenre(genreId) {
+  const data = await fetchFromAPI(
+    `/discover/movie?with_genres=${genreId}&sort_by=popularity.desc`
+  );
+  return data.results;
 }
