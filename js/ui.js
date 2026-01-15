@@ -72,7 +72,6 @@ function renderMovies(containerId, movies = []) {
   const container = document.getElementById(containerId);
   container.innerHTML = movies.map(createMovieCard).join("");
 }
-
 //Hero
 function renderHero(movie, animate = false) {
   const hero = document.querySelector(".hero");

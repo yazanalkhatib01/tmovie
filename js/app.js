@@ -18,7 +18,6 @@ toggleBtn.addEventListener("click", () => {
 
 //-API-
 //hero,recommended,trendingMoves
-
 let heroMovies = [];
 let heroIndex = 0;
 

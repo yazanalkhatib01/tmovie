@@ -19,7 +19,6 @@ async function fetchFromAPI(endpoint) {
 
   return res.json();
 }
-
 /**
  * Get Trending Movies (Weekly)
  * @returns {Promise<Array>}
