@@ -16,8 +16,7 @@ toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("sidebar--collapsed");
 });
 
-//-API-
-//hero,recommended,trendingMoves
+//API-UI Integration
 let heroMovies = [];
 let heroIndex = 0;
 
@@ -59,6 +58,26 @@ async function initHomePage() {
 
     initGenresTabs();
   }
+
+  if (document.getElementById("imdb-movies")) {
+    const movies = await getIMDBTopMovies();
+    renderMovies("imdb-movies", movies);
+  }
+
+  if (document.getElementById("imdb-series")) {
+    const series = await getIMDBTopSeries();
+    renderMovies("imdb-series", series);
+  }
+
+  if (document.getElementById("trending-tv-shows")) {
+    const tvShows = await getTrendingTVShows();
+    renderMovies("trending-tv-shows", tvShows);
+  }
+
+  if (document.getElementById("my-watchlist")) {
+    const watchlist = await getWatchlist();
+    renderMovies("my-watchlist", watchlist);
+  }
 }
 initHomePage();
 
@@ -76,8 +95,6 @@ function initHeroSlider() {
     renderHero(heroMovies[heroIndex], true);
   });
 }
-
-//Genres tabs functionality
 
 function initGenresTabs() {
   const tabs = document.querySelectorAll(".genres__tab");

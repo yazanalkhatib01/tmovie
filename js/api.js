@@ -19,22 +19,20 @@ async function fetchFromAPI(endpoint) {
 
   return res.json();
 }
+
 /**
- * Get Trending Movies (Weekly)
+ * Get Trending Movies (Daily)
  * @returns {Promise<Array>}
  */
 
-//Recommended-card
 async function getRecommendedMovies() {
   return await fetchFromAPI("/movie/top_rated");
 }
 
-//Trending Movies-card
 async function getTrendingMovies() {
-  return await fetchFromAPI("/trending/movie/week");
+  return await fetchFromAPI("/trending/movie/day");
 }
 
-//Hero
 async function getHeroMovie() {
   const data = await fetchFromAPI("/trending/movie/day");
   return data.results.slice(0, 5);
@@ -48,16 +46,34 @@ async function loadGenres() {
   });
 }
 
-//Trending Series
 async function getTrendingSeries() {
   const data = await fetchFromAPI("/trending/tv/day");
   return data.results;
 }
 
-// Genres
 async function getMoviesByGenre(genreId) {
   const data = await fetchFromAPI(
     `/discover/movie?with_genres=${genreId}&sort_by=popularity.desc`
   );
+  return data.results;
+}
+
+async function getIMDBTopMovies() {
+  const data = await fetchFromAPI("/movie/top_rated");
+  return data.results;
+}
+
+async function getIMDBTopSeries() {
+  const data = await fetchFromAPI("/tv/top_rated");
+  return data.results;
+}
+
+async function getTrendingTVShows() {
+  const data = await fetchFromAPI("/trending/tv/day");
+  return data.results;
+}
+
+async function getWatchlist() {
+  const data = await fetchFromAPI("/trending/movie/day");
   return data.results;
 }

@@ -38,7 +38,6 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 //Api-ui
-// cards
 function createMovieCard(item) {
   const title = item.title || item.name;
   const image = item.poster_path || item.backdrop_path;
@@ -72,7 +71,7 @@ function renderMovies(containerId, movies = []) {
   const container = document.getElementById(containerId);
   container.innerHTML = movies.map(createMovieCard).join("");
 }
-//Hero
+
 function renderHero(movie, animate = false) {
   const hero = document.querySelector(".hero");
   const title = document.getElementById("hero__title");
@@ -108,7 +107,6 @@ function renderHero(movie, animate = false) {
   }
 }
 
-//Genres tabs
 function renderGenresTabs(genres) {
   const container = document.getElementById("genres__tabs");
 
